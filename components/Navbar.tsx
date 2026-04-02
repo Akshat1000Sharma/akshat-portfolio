@@ -12,7 +12,31 @@ export default function Navbar({ theme, toggleTheme }: { theme: string, toggleTh
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    // Intersection Observer to detect which section is in view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const sectionId = entry.target.id;
+            const sectionName = sectionId.charAt(0).toUpperCase() + sectionId.slice(1);
+            setActive(sectionName);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    // Observe all sections
+    links.forEach((link) => {
+      const element = document.getElementById(link.toLowerCase());
+      if (element) observer.observe(element);
+    });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
+    };
   }, []);
 
   const scrollTo = (id: string) => {
