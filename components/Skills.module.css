@@ -178,16 +178,19 @@
 }
 
 .techName {
-  font-size: 0.67rem;
+  font-size: 0.55rem; /* slightly smaller */
   font-weight: 500;
   color: var(--text-muted);
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.1;
+
   max-width: 48px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  transition: color 0.25s;
+
+  /* FIX */
+  white-space: normal;      /* allow wrapping */
+  overflow: visible;        /* no clipping */
+  text-overflow: unset;     /* remove dots */
+  word-break: break-word;   /* handle long words like "TypeScript" */
 }
 
 .techItem:hover .techName {

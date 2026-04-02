@@ -100,9 +100,9 @@ const skillGroups = [
     detail: `I've designed and deployed Ethereum smart contracts using Solidity and Hardhat covering DeFi patterns — escrow, deposits/withdrawals, and reentrancy guards. My CryptoBank project combines Solidity contracts with a FastAPI backend and Next.js frontend into a full decentralised banking prototype. I also built a blockchain-based document protection system using on-chain hashing and permissioned access control.`,
     techs: [
       { name: 'Solidity',   icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg' },
-      { name: 'Ethereum',   icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ethereum/ethereum-original.svg' },
+      { name: 'Ethereum',   icon: 'https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/ethereum.svg' },
       { name: 'Web3.js',    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/web3js/web3js-original.svg' },
-      { name: 'Hardhat',    icon: 'https://img.icons8.com/nolan/64/hard-hat.png' },
+      { name: 'Hardhat',    icon: '/logo/hardhat.png' },
     ],
   },
   {
