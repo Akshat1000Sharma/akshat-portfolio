@@ -6,7 +6,9 @@ const stats = [
   { num: '8.5', label: 'CGPA', suffix: '' },
   { num: '3', label: 'Internships', suffix: '+' },
   { num: '14', label: 'Projects', suffix: '+' },
-  { num: '1st', label: 'Hackathon', suffix: '' },
+  { num: 'NTSE', label: 'Qualified', suffix: '' },
+  { num: 'Dean\'s List', label: 'Top 10% Acadmically', suffix: '' },
+  { num: 'Google Certified', label: 'Cybersecurity Professional', suffix: '' },
 ];
 
 export default function About() {
