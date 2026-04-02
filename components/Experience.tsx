@@ -46,10 +46,10 @@ const timeline = [
     company: 'Mechanical Dept., SNU',
     period: '2025',
     type: 'Research',
-    tags: ['Python', 'Bash', 'Simulation', 'Neuromorphic'],
+    tags: ['Python', 'Bash', 'Simulation', 'Data Analysis'],
     bullets: [
-      'Designed neuromorphic-inspired sensor processing pipelines and ran simulations.',
-      'Automated bookkeeping with Bash scripting; manuscript in preparation.',
+      'Conducted lattice-based molecular simulations across diverse structural configurations to analyze system behavior and performance',
+      'Developed Bash automation scripts for bookkeeping and workflow management, streamlining data handling and preprocessing.',
     ],
     color: '#10B981',
   },
