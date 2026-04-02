@@ -1,0 +1,13 @@
+.footer { background: var(--bg-primary); border-top: 1px solid var(--border); padding: 2.5rem 0; transition: background 0.8s, border-color 0.8s; }
+.inner { display: flex; flex-direction: column; align-items: center; gap: 1.25rem; text-align: center; }
+.left { display: flex; align-items: center; gap: 0.75rem; }
+.logo {
+  width: 32px; height: 32px; border-radius: 8px;
+  background: var(--accent); display: flex; align-items: center; justify-content: center;
+  font-family:'Sora',sans-serif; font-weight: 800; font-size: 0.78rem; color: #050510;
+}
+.left p { font-size: 0.85rem; color: var(--text-muted); }
+.center { display: flex; flex-wrap: wrap; gap: 0.25rem; justify-content: center; }
+.link { font-size: 0.82rem; color: var(--text-muted); padding: 0.25rem 0.6rem; transition: color 0.2s; }
+.link:hover { color: var(--accent); }
+.copy { font-size: 0.78rem; color: var(--text-muted); }

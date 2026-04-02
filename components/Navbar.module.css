@@ -1,0 +1,50 @@
+.nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 1000; display: flex; align-items: center;
+  justify-content: space-between; padding: 1.25rem 2.5rem;
+  transition: background 0.4s, backdrop-filter 0.4s, box-shadow 0.4s, padding 0.4s;
+}
+.scrolled {
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 1px 0 var(--border);
+  padding: 0.875rem 2.5rem;
+}
+.logo { display: flex; align-items: center; gap: 0.75rem; cursor: none; }
+.logoMark {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: var(--accent); display: flex; align-items: center; justify-content: center;
+  font-family: 'Sora', sans-serif; font-weight: 800; font-size: 0.85rem; color: #050510;
+  transition: background 0.8s;
+}
+.logoText {
+  font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1rem;
+  color: var(--text-primary); transition: color 0.8s;
+}
+.links { display: flex; list-style: none; gap: 0.25rem; }
+.link {
+  background: none; border: none; cursor: none;
+  font-family: 'DM Sans', sans-serif; font-size: 0.88rem; font-weight: 400;
+  color: var(--text-secondary); padding: 0.4rem 0.75rem; border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+}
+.link:hover { color: var(--accent); background: var(--tag-bg); }
+.activeLink { color: var(--accent) !important; }
+.right { display: flex; align-items: center; gap: 0.75rem; }
+.themeToggle {
+  background: none; border: 1.5px solid var(--border); cursor: none;
+  width: 38px; height: 38px; border-radius: 50%; display: flex;
+  align-items: center; justify-content: center;
+  color: var(--text-secondary); transition: border-color 0.2s, color 0.2s;
+}
+.themeToggle:hover { border-color: var(--accent); color: var(--accent); }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: none; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--text-primary); border-radius: 2px; transition: 0.3s; }
+@media (max-width: 768px) {
+  .links { display: none; position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--nav-bg); backdrop-filter: blur(20px);
+    flex-direction: column; padding: 1rem 2rem; border-bottom: 1px solid var(--border); }
+  .links.open { display: flex; }
+  .hamburger { display: flex; }
+  .logoText { display: none; }
+}
