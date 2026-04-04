@@ -82,7 +82,7 @@ const projects = [
     title: 'TaxiAdda — Real-Time Cab Booking',
     desc: 'Next.js frontend with Firebase Realtime DB for live driver locations and bookings. Deployed demo with realtime tracking functionality using Firebase (GMaps API).',
     tags: ['Next.js', 'Firebase', 'Realtime DB'],
-    cat: 'Full-Stack',
+    cat: 'Firebase',
     year: '2024',
     link: 'https://github.com/Akshat1000Sharma/mytaxiadda/',
     color: '#EF4444',
@@ -92,7 +92,7 @@ const projects = [
     title: 'Phishing Website Detection',
     desc: 'Extracted lexical and domain features; trained a random forest classifier wrapped in a Django demo. Hackathon 1st-place winning prototype.',
     tags: ['Django', 'scikit-learn', 'Python', 'ML'],
-    cat: 'ML / Security',
+    cat: 'AI / ML',
     year: '2023',
     link: 'https://github.com/lalitm1004/phishNet',
     color: '#EC4899',
@@ -132,7 +132,7 @@ const projects = [
     title: 'KNN Credit Card Case Study',
     desc: 'Full preprocessing pipeline, feature engineering, and KNN with cross-validation for credit approval prediction. Deployable inference API included.',
     tags: ['Python', 'scikit-learn', 'ML'],
-    cat: 'ML / AI',
+    cat: 'AI / ML',
     year: '2024',
     link: 'https://github.com/Akshat1000Sharma/Credit-Card-Customer-Churn-Prediction-through-KNN',
     color: '#10B981',
@@ -140,7 +140,7 @@ const projects = [
   },
 ];
 
-const categories = ['All', 'Mobile', 'AI / ML', 'Full-Stack', 'Blockchain', 'Embedded', 'Research', 'Frontend'];
+const categories = ['All', 'Mobile', 'AI / ML', 'Full-Stack', 'Blockchain', 'Firebase'];
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');
@@ -161,6 +161,17 @@ export default function Projects() {
     if (sectionRef.current) obs.observe(sectionRef.current);
     return () => obs.disconnect();
   }, []);
+
+  useEffect(() => {
+    if (!sectionRef.current) return;
+    const rect = sectionRef.current.getBoundingClientRect();
+    const isInView = rect.top < window.innerHeight && rect.bottom > 0;
+    if (isInView) {
+      sectionRef.current.querySelectorAll('.reveal:not(.visible)').forEach((el, i) => {
+        setTimeout(() => el.classList.add('visible'), i * 80);
+      });
+    }
+  }, [activeFilter]);
 
   return (
     <section id="projects" className={styles.projects} ref={sectionRef}>
