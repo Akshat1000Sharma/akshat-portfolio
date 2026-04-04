@@ -58,8 +58,8 @@ export default function About() {
           </h2>
           <div className={styles.bio}>
             <p className={`reveal delay-2`}>
-              I&apos;m a third-year B.Tech student at <strong>Shiv Nadar University</strong> in Computer Science (AIML), 
-              with a CGPA of 8.5 and a spot on the Dean&apos;s List. I build intelligent, full-stack systems 
+              I&apos;m a third-year B.Tech student at Shiv Nadar University in Computer Science (<strong>AIML specialization</strong>), 
+              with a CGPA of 8.5 and a spot on the Dean&apos;s List. I have build many intelligent, full-stack systems 
               that solve real problems.
             </p>
             <p className={`reveal delay-3`}>
@@ -68,7 +68,7 @@ export default function About() {
               during internships at Fealty Technologies.
             </p>
             <p className={`reveal delay-4`}>
-              I&apos;m also a <strong>Teaching Assistant</strong> for Intro to Computing and Probability & Statistics, 
+              I have also been a <strong>Teaching Assistant</strong> for Intro to Computing and Probability & Statistics, 
               an active research contributor, and a logistics lead in student clubs. I hold a 
               <strong> Google Cybersecurity Professional Certificate</strong>.
             </p>
