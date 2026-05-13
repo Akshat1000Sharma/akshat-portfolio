@@ -3,11 +3,11 @@ import { useEffect, useRef } from 'react';
 import styles from './About.module.css';
 
 const stats = [
+  { num: '2', label: 'Years Experience', suffix: '+' },
+  { num: '14', label: 'Projects Delivered', suffix: '+' },
   { num: '8.5', label: 'CGPA', suffix: '' },
-  { num: '3', label: 'Internships', suffix: '+' },
-  { num: '14', label: 'Projects', suffix: '+' },
   { num: 'NTSE', label: 'Qualified', suffix: '' },
-  { num: 'Dean\'s List', label: 'Top 10% Acadmically', suffix: '' },
+  { num: 'Dean\'s List', label: 'Top 10% Academically', suffix: '' },
   { num: 'Google Certified', label: 'Cybersecurity Professional', suffix: '' },
 ];
 
@@ -54,27 +54,28 @@ export default function About() {
         <div className={styles.right}>
           <p className={`section-label reveal`}>About Me</p>
           <h2 className={`section-title reveal delay-1`}>
-            CS + AIML Student<br/><span>& Builder</span>
+            Active Developer<br/><span>& Builder</span>
           </h2>
           <div className={styles.bio}>
             <p className={`reveal delay-2`}>
-              I&apos;m a third-year B.Tech student at Shiv Nadar University in Computer Science (<strong>AIML specialization</strong>), 
-              with a CGPA of 8.5 and a spot on the Dean&apos;s List. I have build many intelligent, full-stack systems 
-              that solve real problems.
+              I&apos;m an actively working developer with <strong>2+ years of professional experience</strong>, currently
+              building impactful products at <strong>RecursX Innovations Pvt Ltd</strong>. I have delivered multiple
+              successful projects end-to-end, spanning full-stack development and production-grade AI systems.
             </p>
             <p className={`reveal delay-3`}>
               My work spans <strong>LLM applications</strong>, <strong>RAG systems</strong>, and <strong>knowledge graphs</strong>
-              — I&apos;ve built production-grade AI systems integrating Neo4j, vector databases, and FastAPI backends 
-              during internships at Fealty Technologies.
+              — I&apos;ve built and shipped production systems integrating Neo4j, vector databases, and FastAPI backends,
+              taking ideas from concept to deployed reality.
             </p>
             <p className={`reveal delay-4`}>
-              I have also been a <strong>Teaching Assistant</strong> for Intro to Computing and Probability & Statistics, 
-              an active research contributor, and a logistics lead in student clubs. I hold a 
-              <strong> Google Cybersecurity Professional Certificate</strong>.
+              Alongside my professional work, I hold an <strong>8.5 CGPA</strong> in CS (AIML specialization) at
+              Shiv Nadar University, a spot on the Dean&apos;s List, and a
+              <strong> Google Cybersecurity Professional Certificate</strong>. I bring both academic depth and
+              real-world execution to every project I take on.
             </p>
           </div>
           <div className={`${styles.chips} reveal`} style={{transitionDelay:'0.5s'}}>
-            {['Shiv Nadar University','AIML B.Tech','TA × 2 Courses','Google Cert','Research Assistant'].map(c=>(
+            {['RecursX Innovations','2+ Yrs Experience','Full-Stack Dev','AI/ML Systems','Google Cert'].map(c=>(
               <span key={c} className={styles.chip}>{c}</span>
             ))}
           </div>
